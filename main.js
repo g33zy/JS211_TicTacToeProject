@@ -83,6 +83,13 @@ const checkForWin = () => {
 }
 
 const changeMarker = () => {
+
+  // 3 ways of writing 
+  
+//  playerTurn === "X" ? playerTurn = "O" : playerTurn = "X"
+
+//  playerTurn = playerTurn === "X" ? "O" : "X"
+
   if(playerTurn === "X"){
     playerTurn = "O"
   } else {
@@ -96,7 +103,7 @@ const ticTacToe = (row, column) => {
   if(board[row][column] === ' '){
     board[row][column] = playerTurn
     if(checkForWin()) {
-      console.log('Winner!')
+      console.log(`Player ${playerTurn} is the Winner!`)
     }
     else{
       changeMarker()
